@@ -1,0 +1,241 @@
+/*----------Begin Baseline Styles----------*/
+	* {
+		box-sizing:border-box; /*All Elements: padding, border, and margin included in an element's defined dimensions*/
+	}
+	.clear {clear:both;} /*All elements assigned this class will not wrap around floated elements*/
+	.copyright {
+		/*Sets font size, alignment, and text wrap of all elements assigned to copyright*/
+		font-size:13px;
+		text-align:center;
+		clear:both;
+	}
+	/*Center and size website using Wrapper div*/
+	#wrapper {width:1000px; margin:0px auto;}
+/*----------End Baseline Styles----------*/
+
+/* ----------Begin Site Header Style---------- */
+	#site_header {
+		background-color:#26A84D;
+		height:185px;
+		/*HUGE NOTE! The site header does not show a background color without the height property. 
+		The reason is that all the elements in the header are floated to one side or the other. 
+		Floating removes these elements from the normal arrangement of the elements. 
+		They are, in fact, floating IN FRONT OF the header element, rather than inside it.
+		This means the header section must be manually sized to accomodate the floated elements.*/
+	}
+	#site_header h1 {
+		float:left; /*Removes the element from the static HTML structure, causing other elements to wrap around it.*/
+		text-align:center;
+		width:650px;
+		padding-top:25px;
+		margin-bottom:0px;
+	}
+	#main_logo_head {
+		width:200px;
+		float:left;
+		padding:10px 20px;
+	}
+	#account {
+		float:right;
+		padding:20px;
+		width:150px;
+	}
+	#account a:link {	
+			color:#020E05;
+	}
+	#head_nav {
+		width:800px;
+		float:left;
+		padding-left:3em;
+	}
+	#head_nav ul li {
+		display:inline-block; /*inline-block allows the use of dimensions, padding, and margins in an otherwise in-line itme.*/
+			padding:10px;
+			margin:2px;
+		text-align:center;
+		font-size:20px;
+		font-weight:bold;
+		width:100px;
+	}
+	#head_nav ul li a {	
+		text-decoration:none;
+		}#head_nav ul li a:link {	
+			color:#020E05;
+		}#head_nav ul li a:visited {	
+			color:#020E05;
+		}#head_nav ul li a:hover {	
+			color:#9EFCBA;
+		}#head_nav ul li a:active {	
+			color:#9EFCBA;
+		}
+	/*=====Begin Navigation Submenus=====*/
+		.head_nav_submenu {
+			display:none; /*Hides the submenus*/
+			border-radius:0 0px 10px 10px;
+		}
+		/*The elements below are not separated by a comma, so they are all a sequential part of the same element.
+		ie. When the mouse hovers over a header navigation line item, apply changes to subheader.*/
+		#head_nav ul li:hover .head_nav_submenu {
+			display:block;
+			position:absolute;
+			background-color:#26A84D;
+			margin-top:10px;
+			margin-left:-11px;
+		}
+		#head_nav ul li:hover .head_nav_submenu ul {
+			margin:0;
+		}
+		#head_nav ul li:hover .head_nav_submenu ul li { 
+			width:100px;
+			display:block;
+			border-bottom: 1px dotted #020E05;
+			margin:0px;
+			padding:5px;
+		}
+		#head_nav ul li:hover .head_nav_submenu ul li:last-child {
+			border-bottom:none;
+		}
+		.head_nav_submenu2 {
+			display:none;
+			border-radius:0 10px 10px 10px;
+		}
+		.nav_hover:hover .head_nav_submenu2 {
+			position:absolute;
+			display:block;
+			margin-top:-28px;
+			margin-left:93px;
+			background-color:#26A84D;
+		}
+		.nav_hover:hover .head_nav_submenu2  ul {
+			margin:0;
+		}
+	/*=====End Navigation Submenus=====*/
+/*----------End Site Header Style----------*/
+
+/*----------Begin Main Body Style----------*/
+	.main_bar {
+		text-align:justify;
+		width:75%;
+		padding-right:2em;
+		padding-left:1em;
+	}
+	.main_bar h2{
+		text-align:center;
+	}
+/*----------End Main Body Style----------*/
+
+/*----------Begin Callbox Style----------*/
+	.callbox {
+		background-color:#26A84D;
+		padding:.5em;
+		width:80%;
+		margin-left:10%;
+		margin-bottom:1em;
+		border-radius:.5em;
+	}
+	
+	.callbox h4 {
+		font-weight:bold;
+		text-align: center;
+	}
+	
+	.callbox p:last-child {
+		margin-bottom:0;
+	}
+/*----------End Callbox Style----------*/
+
+/*----------Begin .flexrow Style----------*/
+.flexrow {
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+}
+.flexrow-li {
+	margin:1em;
+	margin-top:0;
+	padding:.5em;
+	width:50%;
+}
+/*----------End .flexrow Style----------*/
+
+/*----------Begin faq Style----------*/
+	.faq {
+		display:grid;
+		grid-gap:1em;
+		grid-template-columns: auto auto auto;
+	}
+	.faq div{
+		background-color:#9EFCBA;
+		padding:1em;
+		border-radius:2em;
+		padding-bottom:0;
+	}
+/*----------End faq Style----------*/
+
+/*----------Begin Generic Class Styles----------*/
+	.default_ul {
+		list-style-position:outside;
+		margin-left:1em;
+		list-style-type: disc;
+	}
+	
+	.default_ul ul {
+		list-style-position:outside;
+		margin-left:1em;
+		list-style-type: disc;
+	}
+/*----------End Generic Class Styles----------*/
+
+
+
+
+/*----------Begin Sidebar Style----------*/
+	.sidebar {
+		width:25%;
+		float:right;
+		text-align:center;
+	}
+	.sidebar div:first-child{
+		margin-top:0px;
+		background-color:#9EFCBA;
+		border-radius:1.5em;
+	}
+	.sidebar div{
+		margin-top:1em;
+		padding:.75em;
+	}
+	.sidebar h3{
+		margin-bottom:.25em;
+	}
+	.sidebar p{
+		margin-bottom:.5em;
+	}
+/*----------End Sidebar Style----------*/
+
+/*----------Begin Site Footer Style----------*/
+	footer {
+		margin-top:1em;
+	}
+	#foot_nav {
+		text-align:center;
+	}
+	#foot_nav ul {
+		margin-bottom:10px;
+	}
+	#foot_nav ul li {
+		display:inline-block;
+		text-align:center;
+		font-size:14px;
+	}
+	#foot_nav ul li a {	
+		text-decoration:none;
+		}#foot_nav ul li a:link {	
+			color:#0B6325;
+		}#foot_nav ul li a:visited {	
+			color:#0B6325;
+		}#foot_nav ul li a:hover {	
+			color:#52D379;
+		}#foot_nav ul li a:active {	
+			color:#9EFCBA;
+		}
+/*----------End Site Footer Style----------*/
